@@ -48,7 +48,7 @@ function getCountryCode(countryName) {
     })
     .then(data => {        
         const countryCode = data[0].idd.root + data[0].idd.suffixes.join("")
-        // TODO inject countryCode to form
+        
     })
     .catch(error => {
         console.error('Wystąpił błąd:', error);
@@ -62,3 +62,5 @@ function getCountryCode(countryName) {
 
     fetchAndFillCountries();
 })()
+
+getCountryCode()
